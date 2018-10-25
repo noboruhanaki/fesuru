@@ -1,6 +1,13 @@
-<h1>Fesuru | フェスル</h1>
-<p>
-  This is the home page for the
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+<div class="center jumbotron">
+  <h1>Fesuru</h1>
+
+  <h2>This is fesuru
+    <a href="http://www.railstutorial.org/">Fesuru dayo-nn</a>
+    sample application.
+  </h2>
+
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("fesuru.png", alt: "fesuru logo"),
+            'http://rubyonrails.org/' %>

@@ -1,5 +1,28 @@
-<%= form_for(@product, url: products_search_path, html: { method: :get, class: 'form-horizontal', role: 'form' }) do |f| %>
+<div class="center jumbotron">
+  <h1>Fesuru</h1>
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+</div>
+
+<div class="jumbotron">
+  
+  <%= form_for(@product, url: products_search_path, html: { method: :get, class: 'form-horizontal', role: 'form' }) do |f| %>
+  <%= "エリアで探す "%>
   <%= f.text_field :code, class: 'form-control' %>
-  <%= f.text_field :name, class: 'form-control' %>
-  <%= f.submit value: '検索'%>
-<% end %>
+  <%= f.submit value: '検索'%>  
+  <% end %>
+
+</div>
+
+<div class="jumbotron">
+  <%= "スケジュールで探す "%>
+  <%= link_to "日付" ,"#" %>
+</div>
+
+<div class="jumbotron">
+  <%= "カテゴリーで探す "%>
+  <%= link_to image_tag("fes.png", alt: "fes"), '#' %>
+  <%= link_to image_tag("niku.png", alt: "fes"), '#' %>
+  <%= link_to image_tag("omaturi.png", alt: "fes"), '#' %>
+
+</div>
+
