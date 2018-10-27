@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag "application", media: "all",
-                                           "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <title>Fesuru</title>
     <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-    </div>
+    <header>
+      <div class="header-logo">
+        <%= link_to("Fesuru", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("Fesuruとは", "/about") %>
+        </li>
+        <li>
+          <%= link_to("フェス一覧", "/fesus/index") %>
+        </li>
+        <li>
+          <%= link_to("ホゲホゲ", "/posts/new") %>
+        </li>
+        <li>
+          <%= link_to("ホゲホゲ", "/users/index") %>
+        </li>
+      </ul>
+    </header>
+ 
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    
+    <%= yield %>
+    
+    <footer class="footer">
+      <nav>
+        <ul class="header-menus">
+          <li>
+            <%= link_to "Fesuruとは",   '#' %>
+          </li>
+          <li>
+            <%= link_to "お問い合わせ", '#' %>
+          </li>
+          <li>
+            <a href="http://news.railstutorial.org/">ニュース</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
+  
+
+
 </html>

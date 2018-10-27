@@ -1,0 +1,2 @@
+class Fesu < ApplicationRecord
+end
