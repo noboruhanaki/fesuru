@@ -1,0 +1,9 @@
+<%= search_form_for @q, url: fesus_index_path do |f| %>
+  <%= f.label :place_cont, "エリアで探す" %>
+  <div class="input-group">
+    <%= f.text_field :place_cont, placeholder: "Enter username...", class: 'form-control' %>
+    <span class="input-group-btn">
+     <%= f.submit "検索", class: "btn btn-primary" %>
+    </span>
+  </div>
+<% end %>

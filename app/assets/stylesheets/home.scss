@@ -45,7 +45,7 @@ body {
 
 .main {
   position: absolute;
-  top: 64px;
+  /*top: 64px;*/
   width: 100%;
   height: auto;
   min-height: 100%;
@@ -63,7 +63,7 @@ body {
 /* ヘッダー ================================ */
 header {
   height: 64px;
-  position: absolute;
+/*  position: absolute;*/
   z-index: 1;
   width: 100%;
 }
@@ -237,4 +237,8 @@ header {
   width: 100%;
   border-radius: 0 0 2px 2px;
   font-size: 14px;
+}
+
+.fesu-img {
+  width:200px;
 }

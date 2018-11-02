@@ -1,0 +1,16 @@
+<div class="main fesus-index">
+  <div class="container">
+    <h1 class="fesus-heading">フェス一覧</h1>
+    <% @fesus.each do |fesu| %>
+      <div class="fesus-index-item">
+        <div class="fesu-right">
+          <img src="<%= fesu.photo %>" alt="no image" title="no image" >
+          <%= link_to(fesu.title, "/fesus/#{fesu.id}") %>
+          <%= link_to(fesu.category, "/fesus/#{fesu.id}") %>
+          <%= link_to(fesu.place, "/fesus/#{fesu.id}") %>
+          <%= link_to(fesu.date, "/fesus/#{fesu.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

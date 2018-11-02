@@ -10,7 +10,9 @@ gem 'jquery-rails',   '4.3.1'
 gem 'turbolinks',     '5.0.1'
 gem 'jbuilder',       '2.7.0'
 gem 'rails-i18n' # この行を新規で追加
-gem 'ransack'   # この行を新規で追加
+gem 'ransack',        '1.8.4'
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

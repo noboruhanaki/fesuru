@@ -1,11 +1,6 @@
-
 <div class="jumbotron">
-  
-  <%= form_for(@product, url: products_search_path, html: { method: :get, class: 'form-horizontal', role: 'form' }) do |f| %>
-  <%= "エリアで探す "%>
-  <%= f.text_field :code, class: 'form-control' %>
-  <%= f.submit value: '検索'%>  
-  <% end %>
+
+  <%= render :partial => "search_form" %>
 
 </div>
 
@@ -20,3 +15,7 @@
   <%= link_to image_tag("niku.png", alt: "fes"), '#' %>
   <%= link_to image_tag("omaturi.png", alt: "fes"), '#' %>
 </div>
+
+
+<%= render :partial => "fesus/list" %>
+
