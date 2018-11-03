@@ -22,6 +22,6 @@ class ProductsController < ApplicationController
 
   private
     def search_params
-      params.require(:q).permit(:name_cont)
+      params.require(:q).permit(:place_cont)
     end
 end

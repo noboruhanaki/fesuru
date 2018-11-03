@@ -11,7 +11,7 @@ gem 'turbolinks',     '5.0.1'
 gem 'jbuilder',       '2.7.0'
 gem 'rails-i18n' # この行を新規で追加
 gem 'ransack',        '1.8.4'
-gem 'will_paginate',           '3.0.7'
+gem 'will_paginate'  
 gem 'bootstrap-will_paginate', '0.0.10'
 
 group :development, :test do
