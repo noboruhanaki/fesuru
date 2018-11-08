@@ -1,0 +1,15 @@
+<% =begin %>
+
+f.submit '本日の予定', class: 'btn btn-primary'
+
+  <%= link_to '音楽フェス', fesus_index_path(q: "ロック"), image_tag("fes.png", alt: "fes"), '#' %>
+  <%= link_to image_tag("niku.png", alt: "fes"), '#' %>
+  <%= link_to image_tag("omaturi.png", alt: "fes"), '#' %>
+  
+  
+
+= search_form_for @q, url: plans_path do |f|
+  = f.hidden_field :date_eq, value: Date.today
+  = f.submit '本日の予定', class: 'btn btn-primary'
+  
+<%=end %>

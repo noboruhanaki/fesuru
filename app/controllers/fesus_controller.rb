@@ -8,6 +8,8 @@ class FesusController < ApplicationController
       @q = Fesu.ransack(activated_true: true)
       @title = "All users"
     end
+    @q = Fesu.ransack(params[:q])
+    @fesus = @q.result
     @fesus = @q.result.paginate(page: params[:page])
   end
 
