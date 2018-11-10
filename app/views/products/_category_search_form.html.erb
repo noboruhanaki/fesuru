@@ -1,16 +1,4 @@
-<%= search_form_for @q, url: fesus_index_path do |f| %>
-  <h3>カテゴリーで探す</h3>
-    <%= f.hidden_field :category_eq, :value => "音楽フェス" %>
-    <span class="input-group-btn">
-     <%= f.submit "音楽フェス", class: "btn btn-primary" %>
-    </span>
-    <%= f.hidden_field :category_eq, :value => "肉フェス" %>
-    <span class="input-group-btn">
-     <%= f.submit "肉フェス", class: "btn btn-primary" %>
-    </span>
-    <%= f.hidden_field :category_eq, :value => "お祭り" %>
-    <span class="input-group-btn">
-     <%= f.submit "お祭り", class: "btn btn-primary" %>
-    </span>
-    
-    
+<h3>カテゴリーで探す</h3>
+   <%= link_to image_tag("fes.png", alt: "fes"), fesus_index_path(q: { category_eq: "音楽フェス" }), class: 'btn btn-link' %>
+   <%= link_to '肉フェス', fesus_index_path(q: { category_eq: "肉フェス" }), class: 'btn btn-primary' %>
+   <%= link_to 'お祭り', fesus_index_path(q: { category_eq: "お祭り" }), class: 'btn btn-primary' %>
