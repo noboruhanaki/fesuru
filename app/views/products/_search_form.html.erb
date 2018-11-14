@@ -1,53 +1,71 @@
-<%= search_form_for @q, url: fesus_index_path do |f| %>
-  <h3>エリアで探す</h3>
-  <div class="input-group">
-    <%= f.text_field :place_cont, placeholder: "「東京」などのエリアで探す", class: 'form-control' %>
-    <span class="input-group-btn">
-     <%= f.submit "検索", class: "btn btn-primary" %>
-    </span>
-  </div>
-<% end %>
+<!-- Map Area Start Here -->
+<section class="map-layout1 fixed-menu-mt full-width-container">
+    <div class="container-fluid">
+        <div class="google-map-area">
+            <div id="googleMap" style="width:100%; height:400px;"></div>
+        </div>
+    </div>
+</section>
+<!-- Map Area End Here -->
+<!-- Search Area Start Here -->
+<section class="search-layout2 bg-accent">
+    <div class="search-layout2-holder">
+        <div class="container">
+            <%# <form id="cp-search-form" class="bg-body search-layout2-inner"> %>
+                <div class="row">
 
-        <!-- Search Area Staxrt Here -->
-        <section class="search-layout2 bg-accent">
-            <div class="search-layout2-holder">
-                <div class="container">
-                    <form id="cp-search-form" class="bg-body search-layout2-inner">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                                <div class="form-group search-input-area input-icon-location">
-                                    <select id="location" class="select2">
-                                        <option value="0">Select Location</option>
-                                        <option value="1">Paypal</option>
-                                        <option value="2">Master Card</option>
-                                        <option value="3">Visa Card</option>
-                                        <option value="4">Scrill</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                                <div class="form-group search-input-area input-icon-category">
-                                    <select id="categories" class="select2">
-                                        <option value="0">Select Categories</option>
-                                        <option value="1">Paypal</option>
-                                        <option value="2">Master Card</option>
-                                        <option value="3">Visa Card</option>
-                                        <option value="4">Scrill</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                                <div class="form-group search-input-area input-icon-keywords">
-                                    <input placeholder="Enter Keywords here ..." value="" name="key-word" type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-12 text-right text-left-mb">
-                                <a href="#" class="cp-search-btn"><i class="fa fa-search" aria-hidden="true"></i>Search</a>
-                            </div>
+<%
+=begin
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="form-group search-input-area input-icon-location">
+                            <select id="location" class="select2">
+                                <option value="0">Select Location</option>
+                                <option value="1">Paypal</option>
+                                <option value="2">Master Card</option>
+                                <option value="3">Visa Card</option>
+                                <option value="4">Scrill</option>
+                            </select>
                         </div>
-                    </form>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="form-group search-input-area input-icon-category">
+                            <select id="categories" class="select2">
+                                <option value="0">Select Categories</option>
+                                <option value="1">Paypal</option>
+                                <option value="2">Master Card</option>
+                                <option value="3">Visa Card</option>
+                                <option value="4">Scrill</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+=end
+%>
+                    <div class="col-lg-12 col-md-6 col-sm-6 col-12">
+                        <%= search_form_for @q, url: fesus_index_path do |f| %>
+                          <div class="input-group"> 
+                            <%= f.text_field :place_cont, placeholder: "「東京」などのエリアで探す", class: 'form-control' %>
+                            <span class="input-group-btn">
+                             <%= f.submit "検索", class: "btn btn-primary" %>
+                            </span>
+                          </div>
+                        <% end %>
+                    </div>
+
+<%
+=begin
+                        <div class="form-group search-input-area input-icon-keywords">
+                            <input placeholder="Enter Keywords here ..." value="" name="key-word" type="text">
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 text-right text-left-mb">
+                            <a href="#" class="cp-search-btn"><i class="fa fa-search" aria-hidden="true"></i>Search</a>
+                        </div>
+=end
+%>
                 </div>
-            </div>
-        </section>
-        <!-- Search Area End Here -->
-        <!-- Service Area Start Here -->
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Search Area End Here -->
