@@ -1,20 +1,9 @@
-<div class="jumbotron">
+<%= render :partial => "search_form" %>
 
-  <%= render :partial => "search_form" %>
+<h3>スケジュールで探す</h3>
+<%= link_to "日付" ,"#" %>
 
-</div>
-
-<div class="jumbotron">
-  <h3>スケジュールで探す</h3>
-  <%= link_to "日付" ,"#" %>
-</div>
-
-<div class="jumbotron">
-  
-  <%= render :partial => "category_search_form" %>
-
-</div>
-
+<%= render :partial => "category_search_form" %>
 
 <%= render :partial => "fesus/list" %>
 

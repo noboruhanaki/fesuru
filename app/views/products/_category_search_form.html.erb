@@ -1,4 +1,72 @@
-<h3>カテゴリーで探す</h3>
-   <%= link_to image_tag("fes.png", alt: "fes"), fesus_index_path(q: { category_eq: "音楽フェス" }), class: 'btn btn-link' %>
-   <%= link_to image_tag("niku.png", alt: "niku"), fesus_index_path(q: { category_eq: "肉フェス" }), class: 'btn btn-link' %>
-   <%= link_to image_tag("omaturi.png",alt: "omaturi"), fesus_index_path(q: { category_eq: "お祭り" }), class: 'btn btn-link' %>
+ <!-- Service Area Start Here -->
+        <section class="service-layout1 bg-accent s-space-custom3">
+            <div class="container">
+                <div class="section-title-dark">
+                    <h2>カテゴリーで探す</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 item-mb">
+                        <div class="service-box1 bg-body text-center">
+                            <%= link_to image_tag("/img/category/music.jpg", alt: "fes"), fesus_index_path(q: { category_eq: "音楽フェス" }), class: 'btn btn-link' %>
+                            <h3 class="title-medium-dark mb-none"><a href="category-list-layout1.html">音楽フェス</a></h3>
+                            <div class="view">(19,805)</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 item-mb">
+                        <div class="service-box1 bg-body text-center">
+                               <%= link_to image_tag("/img/category/oniku.jpg", alt: "niku"), fesus_index_path(q: { category_eq: "肉フェス" }), class: 'btn btn-link' %>
+                            <h3 class="title-medium-dark mb-none"><a href="category-grid-layout1.html">肉フェス</a></h3>
+                            <div class="view">(12,857)</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 item-mb">
+                        <div class="service-box1 bg-body text-center">
+                            <%= link_to image_tag("/img/category/omaturi.jpg",alt: "omaturi"), fesus_index_path(q: { category_eq: "お祭り" }), class: 'btn btn-link' %>
+                            <h3 class="title-medium-dark mb-none"><a href="category-list-layout2.html">お祭り</a></h3>
+                            <div class="view">(16,267)</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 item-mb">
+                        <div class="service-box1 bg-body text-center">
+                            <%= link_to image_tag("/img/category/game.jpg",alt: "game"), fesus_index_path(q: { category_eq: "ゲームフェス" }), class: 'btn btn-link' %>
+                            <h3 class="title-medium-dark mb-none"><a href="category-grid-layout2.html">ゲームフェス</a></h3>
+                            <div class="view">(1,245)</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 item-mb">
+                        <div class="service-box1 bg-body text-center">
+                            <%= link_to image_tag("/img/category/wine.jpeg",alt: "wine"), fesus_index_path(q: { category_eq: "ワインフェス" }), class: 'btn btn-link' %>
+                            <h3 class="title-medium-dark mb-none"><a href="category-list-layout3.html">ワインフェス</a></h3>
+                            <div class="view">(15,897)</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 item-mb">
+                        <div class="service-box1 bg-body text-center">
+                            <%= link_to image_tag("/img/category/bear.jpg",alt: "bear"), fesus_index_path(q: { category_eq: "ビールフェス" }), class: 'btn btn-link' %>
+                            <h3 class="title-medium-dark mb-none"><a href="category-grid-layout3.html">ビールフェス</a></h3>
+                            <div class="view">(13,657)</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 item-mb">
+                        <div class="service-box1 bg-body text-center">
+                            <%= link_to image_tag("/img/category/movie.jpg",alt: "movie"), fesus_index_path(q: { category_eq: "映画フェス" }), class: 'btn btn-link' %>
+                            <h3 class="title-medium-dark mb-none"><a href="category-list-layout1.html">映画フェス</a></h3>
+                            <div class="view">(19,227)</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 item-mb">
+                        <div class="service-box1 bg-body text-center">
+                            <%= link_to image_tag("/img/category/art.jpg",alt: "art"), fesus_index_path(q: { category_eq: "アートフェス" }), class: 'btn btn-link' %>
+                            <h3 class="title-medium-dark mb-none"><a href="category-grid-layout1.html">アートフェス</a></h3>
+                            <div class="view">(11,607)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="text-center item-mt item-mb">
+                    <a href="#" class="cp-default-btn direction-img">More Category...</a>
+                </div>
+            </div>
+        </section>
+        <!-- Service Area End Here -->
