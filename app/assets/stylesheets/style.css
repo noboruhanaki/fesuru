@@ -2629,6 +2629,7 @@ p.text-bold-primary {
   text-align: right;
 }
 .main-menu-area .cp-main-menu nav ul li {
+  color:black;
   text-align: left;
   position: relative;
   display: inline-block;
@@ -2791,7 +2792,7 @@ p.text-bold-primary {
   padding: 22px 15px;
 }
 .header-style1 .cp-main-menu nav ul li a {
-  color: #FFFFFF;
+  color: #5a5858;
 }
 .header-style2 {
   -webkit-box-shadow: 0px 15px 100px 0px rgba(212, 212, 212, 0.5);
@@ -4316,6 +4317,8 @@ ul.specification-layout2 > li:before {
 .process-area li p {
   font-size: 15px;
   margin-bottom: 0;
+  margin:0px 15px 20px 15px;
+
 }
 /*=======================================================================
 [13] Subscribe Style
@@ -5915,6 +5918,7 @@ ul.sidebar-ads-from-user li .price {
   }
   .process-area li p {
     padding: 0 10px;
+    margin:0px 15px 20px 15px;
   }
   .header-style2 {
     padding-bottom: 0;
@@ -6276,4 +6280,31 @@ ul.sidebar-ads-from-user li .price {
   margin-right: auto;
   display: inline-block;
   object-fit: cover;
+}
+
+.main-visual-inner {
+    padding-top: 120px;
+}
+
+.main-title {
+    width: 960px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.44;
+    font-weight: 400;
+}
+
+.main_read {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.58;
+    color: #fff;
+}
+
+.img-about-icon {
+    width:100px;
+    height: 100px
 }
