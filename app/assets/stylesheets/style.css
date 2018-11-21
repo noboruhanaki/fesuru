@@ -6270,6 +6270,7 @@ ul.sidebar-ads-from-user li .price {
     position: absolute;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    background: #000;
 }
 
 .top-img {
@@ -6280,28 +6281,33 @@ ul.sidebar-ads-from-user li .price {
   margin-right: auto;
   display: inline-block;
   object-fit: cover;
+  display: block;
+  opacity: .6;
 }
 
 .main-visual-inner {
-    padding-top: 120px;
+    padding-top: 150px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
-.main-title {
-    width: 960px;
-    display: table-cell;
+.main-title{
     vertical-align: middle;
     text-align: center;
     font-size: 32px;
     line-height: 1.44;
     font-weight: 400;
+    color: white;
+  
 }
 
-.main_read {
+.main-read {
     margin-top: 30px;
     text-align: center;
     font-size: 16px;
     line-height: 1.58;
-    color: #fff;
+    color: white;
 }
 
 .img-about-icon {
