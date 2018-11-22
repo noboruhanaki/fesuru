@@ -1934,7 +1934,7 @@ p.text-bold-primary {
   }
 }
 .s-space-bottom-full {
-  padding: 0 0 100px;
+  padding: 88px 0 100px;
 }
 @media only screen and (max-width: 1199px) {
   .s-space-bottom-full {
