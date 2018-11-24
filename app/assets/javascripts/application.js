@@ -12,4 +12,17 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require jquery-2.2.4.min
+//= require jquery.counterup.min
+//= require jquery.magnific-popup.min
+//= require jquery.meanmenu.min
+//= require jquery.scrollUp.min
+//= require jquery.zoom.min
+//= require popper
+//= require select2.min
+//= require validator.min
+//= require waypoints.min
+//= require cable
+//= require isotope.pkgd.min
+//= require bootstrap.min
+//= require main
