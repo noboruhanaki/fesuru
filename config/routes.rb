@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root "products#index"
   get  "fesus/index" => "fesus#index"
   get  "fesus/:id" => "fesus#show"
