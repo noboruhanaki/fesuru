@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get  "products/search" => "products#search"
   get  'static_pages/help'
   get  'products/search'
+  resources :users
 end
