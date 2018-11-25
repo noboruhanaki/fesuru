@@ -25,4 +25,5 @@
 //= require cable
 //= require isotope.pkgd.min
 //= require bootstrap.min
+//= require owl.carousel.min
 //= require main
