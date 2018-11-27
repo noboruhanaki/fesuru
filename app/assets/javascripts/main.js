@@ -4,7 +4,7 @@
     /*-------------------------------------
     Right click , ctrl+u and ctrl+shift+i disabled 
     -------------------------------------*/
-   /* $('body').on('contextmenu', function (e) {
+   $('body').on('contextmenu', function (e) {
         e.preventDefault();
         e.stopPropagation();
         return false;
@@ -21,7 +21,7 @@
             return true;
         }
     });
-*/
+
     /*-------------------------------------
     Category Switcher 
     -------------------------------------*/
@@ -397,10 +397,11 @@
             rMedium = carousel.data('r-medium'),
             rMediumNav = carousel.data('r-medium-nav'),
             rMediumDots = carousel.data('r-medium-dots'),
-            rLarge = carousel.data('r-Large'),
-            rLargeNav = carousel.data('r-Large-nav'),
-            rLargeDots = carousel.data('r-Large-dots'),
+            rLarge = carousel.data('r-large'),
+            rLargeNav = carousel.data('r-large-nav'),
+            rLargeDots = carousel.data('r-large-dots'),
             center = carousel.data('center');
+            carousel.addClass('owl-carousel');
         carousel.owlCarousel({
             loop: (loop ? true : false),
             items: (items ? items : 4),
