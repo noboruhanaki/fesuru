@@ -19,15 +19,29 @@
                                     <li><a href="/about">フェスルとは</a></li>
                                     <li><a href="/fesus/index">フェス一覧</a></li>
                                     <li><a href="/category">カテゴリー一覧</a></li>
-                                    <li><a href="/favorite">お気に入り</a></li>
-                                    <li><a href="/contact">お問い合わせ</a></li>
+                                    <% if logged_in? %>
+                                      <li><%= link_to "ユーザー", '#' %></li>
+                                      <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">アカウント<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                          <li><%= link_to "プロフィール", current_user %></li>
+                                          <li><%= link_to "設定", '#' %></li>
+                                          <li class="divider"></li>
+                                          <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+                                        </ul>
+                                      </li>
+                                    <% else %>
+                                      <li><%= link_to "ログイン", login_path %></li>
+                                    <% end %>
                                 </ul>
                             </nav>
                         </div>
                     </div>
+                    <!--
                     <div class="col-lg-2 col-md-2 col-sm-3 text-right">
                         <a href="#" class="cp-default-btn">マイページ</a>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
