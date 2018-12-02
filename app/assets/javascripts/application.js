@@ -27,3 +27,5 @@
 //= require bootstrap.min
 //= require owl.carousel.min
 //= require main
+//= require underscore
+//= require gmaps/google
