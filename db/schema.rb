@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20181210013406) do
     t.string "place"
     t.string "photo"
     t.string "category"
-    t.string "date"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
@@ -37,6 +37,11 @@ ActiveRecord::Schema.define(version: 20181210013406) do
   end
 
   create_table "products", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.string "name_kana"
+    t.integer "price_gteq"
+    t.integer "purchase_cost_gteq"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
