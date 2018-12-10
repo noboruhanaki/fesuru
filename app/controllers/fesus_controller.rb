@@ -17,6 +17,13 @@ class FesusController < ApplicationController
     @fesus = Fesu.find_by(id: params[:id])
   end
   
+  def fesu_params
+      params.require(:fesu).permit(
+        :title, :address, :latitude, :longitude
+      )
+  end
+    
+  
   private
     def search_params
       params.require(:q).permit(:place_cont)

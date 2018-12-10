@@ -97,9 +97,9 @@
                     handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
                       markers = handler.addMarkers([
                         {
-                          "lat": <%= @article.latitude %>,
-                          "lng": <%= @article.longitude %>,
-                		  "infowindow": '<p><%= @article.title %></p><p><%= @article.address %></p><p><%= link_to "Googleマップで見る" ,"https://maps.google.co.jp/maps?q=loc:#{@article.latitude},#{@article.longitude}&iwloc=J",target: "_blank" %></p>'
+                          "lat": <%= @fesu.latitude %>,
+                          "lng": <%= @fesu.longitude %>,
+                		  "infowindow": '<p><%= @fesu.title %></p><p><%= @fesu.address %></p><p><%= link_to "Googleマップで見る" ,"https://maps.google.co.jp/maps?q=loc:#{@fesu.latitude},#{@fesu.longitude}&iwloc=J",target: "_blank" %></p>'
                         }
                       ]);
                       handler.bounds.extendWith(markers);
