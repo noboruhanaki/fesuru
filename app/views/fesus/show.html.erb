@@ -70,6 +70,7 @@
                             <p>この文章は日本語、English、1二３、ﾊﾝｶｸ、全角文字が含まれて40文字。そしてこの文章は、上記要素がAll content入ってﾙｰ大柴みたいになった8０文字入った文章です。貴方likeの幅になったでしょうか？そういうわけで文字数。  </p>
                             <p>この文章は日本語、English、1二３、ﾊﾝｶｸ、全角文字が含まれて40文字。そしてこの文章は、上記要素がAll content入ってﾙｰ大柴みたいになった8０文字入った文章です。貴方likeの幅になったでしょうか？そういうわけで文字数。</p>
                         </div>
+                        <hr>
                         <div class="section-title-left-dark child-size-xl">
                             <h3>フェス詳細</h3>
                         </div>
@@ -84,6 +85,55 @@
                             <li>hogehoge：</li>
                             <li>hogehoge：</li>
                         </ul>
+                        <hr>
+                        <div class="section-title-left-dark child-size-xl">
+                            <h3>フェス会場</h3>
+                        </div>
+                        <div id="map" style='width: 100%; height: 500px;'></div>
+                          <script type="text/javascript">
+                            handler = Gmaps.build('Google');
+                            handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
+                              markers = handler.addMarkers([
+                                {
+                                  "lat": <%= @fesus.latitude %>,
+                                  "lng": <%= @fesus.longitude %>,
+                        		  "infowindow": '<p><%= @fesus.title %></p><p><%= @fesus.address %></p><p><%= link_to "Googleマップで見る" ,"https://maps.google.co.jp/maps?q=loc:#{@fesus.latitude},#{@fesus.longitude}&iwloc=J",target: "_blank" %></p>'
+                                }
+                              ]);
+                              handler.bounds.extendWith(markers);
+                              handler.fitMapToBounds();
+                              handler.getMap().setZoom(17);
+                            });
+                          </script>
+                          <hr>
+                          <div class="section-title-left-dark child-size-xl">
+                            <h3>レビューを書く</h3>
+                          </div> 
+                              <% if logged_in? %>
+                                  <div class="row">
+                                    <aside class="col-md-4">
+                                      <section class="user_info">
+                                        <%= render 'shared/user_info' %>
+                                      </section>
+                                      <section class="micropost_form">
+                                        <%= render 'shared/micropost_form' %>
+                                      </section>
+                                    </aside>
+                                  </div>
+                                <% else %>
+                                  <div class="center jumbotron">
+                                    <h2>レビューしたけりゃサインアップしてください</h2>
+                                      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+                                  </div>
+                              <% end %>
+                          <hr>
+                          <div class="section-title-left-dark child-size-xl">
+                            <h3>レビュー</h3>
+                          </div>
+                            <div class="col-md-8">
+                              <h3>Micropost Feed</h3>
+                              <%= render 'shared/feed' %>
+                            </div>
                         <ul class="item-actions border-top">
                             <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>お気に入り</a></li>
                             <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>シェアする</a></li>
@@ -91,23 +141,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="map" style='width: 100%; height: 500px;'>
-                  <script type="text/javascript">
-                    handler = Gmaps.build('Google');
-                    handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
-                      markers = handler.addMarkers([
-                        {
-                          "lat": <%= @fesus.latitude %>,
-                          "lng": <%= @fesus.longitude %>,
-                		  "infowindow": '<p><%= @fesus.title %></p><p><%= @fesus.address %></p><p><%= link_to "Googleマップで見る" ,"https://maps.google.co.jp/maps?q=loc:#{@fesus.latitude},#{@fesus.longitude}&iwloc=J",target: "_blank" %></p>'
-                        }
-                      ]);
-                      handler.bounds.extendWith(markers);
-                      handler.fitMapToBounds();
-                      handler.getMap().setZoom(17);
-                    });
-                  </script>
-                  </div>
+                
                 <div class="gradient-wrapper item-mb">
                     <div class="gradient-title">
                         <h2>関連するあなたにオススメのフェス</h2>
