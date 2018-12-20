@@ -28,7 +28,7 @@ users = User.order(:created_at).take(6)
   users.each { |user| user.microposts.create!(content: content) }
 end
 
-Fesu.create!(title: "サマソニ", place: "千葉 幕張 海浜幕張",photo: "/img/fesu/sonic.jpg", category: "音楽フェス", date: "2018/11/15" )
+Fesu.create!(title: "サマソニ", place: "千葉 幕張 海浜幕張",photo: "/img/fesu/sonic.jpg", category: "音楽フェス", date: "2018/11/15", latitude: "35.6938097" ,longitude:"139.7532163")
 
 Fesu.create!(title: "フジロック", place: "新潟 苗場", photo: "/img/fesu/fujirock.jpg", category: "音楽フェス", date: "2018/10/27" )
 

@@ -15,9 +15,7 @@ class FesusController < ApplicationController
 
   def show
     @fesus = Fesu.find_by(id: params[:id])
-    @fesu = Fesu.find_by(id: params[:id])
   end
-  
 
   def fesu_params
     params.require(:fesu).permit(
