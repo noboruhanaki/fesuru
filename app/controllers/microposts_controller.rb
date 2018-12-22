@@ -3,10 +3,12 @@ class MicropostsController < ApplicationController
 
   def create
     @micropost = current_user.microposts.build(micropost_params)
+    @micropost.fesu_id = params[:fesu_id]
     if @micropost.save
       flash[:success] = "Micropost created!"
       redirect_to root_url
     else
+      @feed_items = []
       render 'fesus/show'
     end
   end

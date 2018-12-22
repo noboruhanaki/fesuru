@@ -130,10 +130,18 @@
                           <div class="section-title-left-dark child-size-xl">
                             <h3>レビュー</h3>
                           </div>
+                          <% if logged_in? %>
                             <div class="col-md-8">
                               <h3>Micropost Feed</h3>
                               <%= render 'shared/feed' %>
                             </div>
+                          <% else %>
+                          <div class="center jumbotron">
+                            <h2>レビュー見たけりゃサインアップしてください</h2>
+                              <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+                          </div>
+                          <% end %>
+                          
                         <ul class="item-actions border-top">
                             <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>お気に入り</a></li>
                             <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>シェアする</a></li>

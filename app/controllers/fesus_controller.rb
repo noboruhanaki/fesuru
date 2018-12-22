@@ -16,7 +16,10 @@ class FesusController < ApplicationController
   def show
     @fesus = Fesu.find_by(id: params[:id])
     @micropost = current_user.microposts.build if logged_in?
-    @feed_items = current_user.feed.paginate(page: params[:page])
+    # この書き方だとログインユーザーに紐づいた口コミを取得するという処理になる
+    # @feed_items = current_user.feed.paginate(page: params[:page]) if logged_in?
+    # この書き方にすると、フェスに紐づいた口コミを取得するという処理になる
+    @feed_items = @fesus.microposts.paginate(page: params[:page])
   end
 
   def fesu_params
