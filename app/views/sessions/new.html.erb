@@ -1,18 +1,40 @@
-<% provide(:title, "Log in") %>
-<div class="container">
-  <h1>Log in</h1>
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
+<!-- Login start -->
+<section class="s-space-bottom-full bg-accent-shadow-body">
+    <div class="container">
+        <div class="breadcrumbs-area">
+            <ul>
+                <li><a href="#">Home</a> -</li>
+                <li class="active">ログイン</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12 mb--sm">
+                <div class="gradient-wrapper">
+                    <div class="gradient-title">
+                        <h2>ログイン</h2>
+                    </div>
+                    <div class="about-us gradient-padding">
+                       <% provide(:title, "Log in") %>
+                        <div class="container">
+                          <div class="col-md-6 col-md-offset-3">
+                            <%= form_for(:session, url: login_path) do |f| %>
+                              <%= f.label :email %>
+                              <%= f.email_field :email, class: 'form-control' %>
+                              <%= f.label :password %>
+                              <%= f.password_field :password, class: 'form-control' %>
+                              <%= f.submit "ログイン", class: "btn btn-primary" %>
+                            <% end %>
+                            <p>未登録？ <%= link_to "サインアップはこちら", signup_path %></p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%= render :partial => "shared/sidebar" %>
+        </div>
+    </div>
+</section>
+<!-- Login end -->
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "Log in", class: "btn btn-primary" %>
-    <% end %>
-
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-  </div>
-</div>

@@ -121,9 +121,10 @@
                                     </aside>
                                   </div>
                                 <% else %>
-                                  <div class="center jumbotron">
-                                    <h2>レビューしたけりゃサインアップしてください</h2>
-                                      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+                                  <div class="container">
+                                    <h3>レビューの書き込みにはサインアップが必要です</h3>
+                                      <%= link_to "サインアップ", signup_path, class: "btn btn-outline-success" %>
+                                      <%= link_to "ログイン", login_path, class: "btn btn-outline-success" %>
                                   </div>
                               <% end %>
                           <hr>
@@ -132,14 +133,15 @@
                           </div>
                           <% if logged_in? %>
                             <div class="col-md-8">
-                              <h3>Micropost Feed</h3>
                               <%= render 'shared/feed' %>
                             </div>
                           <% else %>
-                          <div class="center jumbotron">
-                            <h2>レビュー見たけりゃサインアップしてください</h2>
-                              <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+                          <div class="container">
+                            <h3>レビューの閲覧にはサインアップ、もしくはログインが必要です</h3>
+                              <%= link_to "サインアップ", signup_path, class: "btn btn-outline-success" %>
+                              <%= link_to "ログイン", login_path, class: "btn btn-outline-success" %>
                           </div>
+                          
                           <% end %>
                           
                         <ul class="item-actions border-top">
@@ -331,96 +333,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                <div class="sidebar-item-box">
-                    <div class="gradient-wrapper">
-                        <div class="gradient-title">
-                            <h3>Seller Information</h3>
-                        </div>
-                        <ul class="sidebar-seller-information">
-                            <li>
-                                <div class="media">
-                                    <img src="img/user/user1.png" alt="user" class="img-fluid pull-left">
-                                    <div class="media-body">
-                                        <span>Posted By</span>
-                                        <h4>Mr. Fahim Rahman</h4>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <img src="img/user/user2.png" alt="user" class="img-fluid pull-left">
-                                    <div class="media-body">
-                                        <span>Location</span>
-                                        <h4>Gulshan, Dhaka</h4>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <img src="img/user/user3.png" alt="user" class="img-fluid pull-left">
-                                    <div class="media-body">
-                                        <span>Contact Number</span>
-                                        <h4>01612854530</h4>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <img src="img/user/user4.png" alt="user" class="img-fluid pull-left">
-                                    <div class="media-body">
-                                        <span>Want To Live Chat</span>
-                                        <h4>Chat Now!</h4>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <img src="img/user/user5.png" alt="user" class="img-fluid pull-left">
-                                    <div class="media-body">
-                                        <span>User Type</span>
-                                        <h4>Verified</h4>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sidebar-item-box">
-                    <div class="gradient-wrapper">
-                        <div class="gradient-title">
-                            <h3>Item Details</h3>
-                        </div>
-                        <ul class="sidebar-item-details">
-                            <li>Condition:<span>New</span></li>
-                            <li>Brand:<span>Apple</span></li>
-                            <li>Color:<span>White</span></li>
-                            <li>Warranty:<span>1 Year</span></li>
-                            <li>
-                                <ul class="sidebar-social">
-                                    <li>Share:</li>
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sidebar-item-box">
-                    <div class="gradient-wrapper">
-                        <div class="gradient-title">
-                            <h3>Safety Tips for Buyers</h3>
-                        </div>
-                        <ul class="sidebar-safety-tips">
-                            <li>Meet seller at a public place</li>
-                            <li>Check The item before you buy</li>
-                            <li>Pay only after collecting The item</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
+            <%= render 'shared/sidebar' %>
+            
         </div>
     </div>
 </section>

@@ -6,7 +6,7 @@ class MicropostsController < ApplicationController
     @micropost.fesu_id = params[:fesu_id]
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to root_url
+      redirect_to "/fesus/#{@micropost.fesu_id}" # 条件付き(後述)
     else
       @feed_items = []
       render 'fesus/show'

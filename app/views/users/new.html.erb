@@ -1,23 +1,48 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<!-- Sign up start -->
+<section class="s-space-bottom-full bg-accent-shadow-body">
+    <div class="container">
+        <div class="breadcrumbs-area">
+            <ul>
+                <li><a href="#">Home</a> -</li>
+                <li class="active">サインアップ</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12 mb--sm">
+                <div class="gradient-wrapper">
+                    <div class="gradient-title">
+                        <h2>サインアップ</h2>
+                    </div>
+                    <div class="about-us gradient-padding">
+                       <% provide(:title, 'Sign up') %>
+                        <div class="container">
+                          <div class="col-md-6 col-md-offset-3">
+                            <%= form_for(@user) do |f| %>
+                              <%= render 'shared/error_messages', object: f.object %>
+                              <%= f.label :name %>
+                              <%= f.text_field :name, class: 'form-control' %>
+                        
+                              <%= f.label :email %>
+                              <%= f.email_field :email, class: 'form-control' %>
+                        
+                              <%= f.label :password %>
+                              <%= f.password_field :password, class: 'form-control' %>
+                        
+                              <%= f.label :password_confirmation, "Confirmation" %>
+                              <%= f.password_field :password_confirmation, class: 'form-control' %>
+                        
+                              <%= f.submit "サインアップ", class: "btn btn-primary" %>
+                            <% end %>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%= render :partial => "shared/sidebar" %>
+        </div>
+    </div>
+</section>
+<!-- Sign up end -->
 
-<div class="container">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
