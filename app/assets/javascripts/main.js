@@ -174,7 +174,7 @@
     /*-------------------------------------
     // jQuery MeanMenu activation code
      --------------------------------------*/
-    $('nav#dropdown').meanmenu({siteLogo: "<div class='mobile-menu-nav-back'><a href='index.html' class='logo-mobile'><img src='img/logo.png' /></a></div>"});
+    $('nav#dropdown').meanmenu({siteLogo: "<div class='mobile-menu-nav-back'><a href='/' class='logo-mobile'><div class=logologo><img src='/img/fesuru_logo_2.png' ></div></a></div>"});
   
     /*-------------------------------------
     // jquery zoom activation code
